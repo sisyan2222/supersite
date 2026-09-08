@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма оплаты</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-form-container">
+        <h2>Оплата картой</h2>
+        
+        <form id="paymentForm">
+            <!-- Номер карты -->
+            <div class="input-group">
+                <label for="cardNumber">Номер карты</label>
+                <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required autocomplete="off">
+            </div>
+
+            <!-- Срок и CVC в одну строку -->
+            <div class="row">
+                <div class="input-group">
+                    <label for="cardExpiry">Срок</label>
+                    <input type="text" id="cardExpiry" placeholder="ММ/ГГ" maxlength="5" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <label for="cardCvc">CVC</label>
+                    <input type="password" id="cardCvc" placeholder="123" maxlength="3" required autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Кнопка оплаты с суммой в тенге -->
+            <button type="submit" id="payBtn" class="pay-btn">Оплатить 4 700 ₸</button>
+        </form>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
